@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Configs>
+  <Config key="OnlineApiBase" value="http://docs.unity3d.com/ScriptReference"></Config>
+  <Config key="LocalApiBase" value="D:\Program Files\Unity\Editor\Data\Documentation\en\ScriptReference"></Config>
+  <Config key="SearchPage" value="30_search.html"></Config>
+</Configs>

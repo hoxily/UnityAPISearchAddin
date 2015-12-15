@@ -1,0 +1,42 @@
+﻿<Addin id = "UnityAPISearch"
+       name	     = "Unity API Search for use with Unity"
+       author	 = "Hoxily"
+       url       = "http://github.com/hoxily"
+       description = "Unity API Search for use with Unity"
+       copyright   = "MIT X11"
+       category = "Unity"
+       version   = "5.0+">
+
+	<Dependencies>
+		<Addin id="MonoDevelop.Ide" version="4.0.1"/>
+		<Addin id="MonoDevelop.Core" version="4.0.1"/>
+		<Addin id="MonoDevelop.SourceEditor2" version="4.0.1"/>
+	</Dependencies>
+	
+	<Extension path = "/MonoDevelop/Ide/MainMenu/Help">
+		<CommandItem id = "UnityAPISearch.Commands.SearchReferenceLocal" 
+            insertafter= "MonoDevelop.Ide.Commands.HelpCommands.Help" />
+	</Extension>
+	
+	<Extension path = "/MonoDevelop/Ide/Commands/Help">
+		<Command id = "UnityAPISearch.Commands.SearchReferenceLocal" 
+			_label = "Unity API Reference(Local)"
+			description = "Opens the Unity API Reference."
+			defaultHandler = "UnityAPISearch.SearchReferenceCommandHandlerLocal"
+		/>
+	</Extension>
+	<Extension path = "/MonoDevelop/Ide/MainMenu/Help">
+		<CommandItem id = "UnityAPISearch.Commands.SearchReferenceOnline" 
+            insertafter= "MonoDevelop.Ide.Commands.HelpCommands.Help" />
+	</Extension>
+	
+	<Extension path = "/MonoDevelop/Ide/Commands/Help">
+		<Command id = "UnityAPISearch.Commands.SearchReferenceOnline" 
+			_label = "Unity API Reference(Online)"
+			description = "Opens the Unity API Reference."
+			defaultHandler = "UnityAPISearch.SearchReferenceCommandHandlerOnline"
+			shortcut = "Control|'" 
+			macShortcut = "Meta|'"
+		/>
+	</Extension>
+</Addin>
